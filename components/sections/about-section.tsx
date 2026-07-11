@@ -15,9 +15,12 @@ export default function AboutSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-bold mb-6 liquid-gradient font-sora">About Me</h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
-            I'm a creative technologist who bridges the gap between design and development, crafting digital experiences
-            that push the boundaries of what's possible on the web.
+          <p className="text-xl text-white/80 max-w-4xl mx-auto">
+            I'm a passionate Computer Engineering student with a deep love for Artificial Intelligence, Data Science,
+            and Machine Learning. I thrive on solving real-world problems using AI technologies — from building
+            Retrieval-Augmented Generation pipelines and Large Language Model applications to developing scalable
+            REST APIs with FastAPI. I'm a continuous learner who believes in the power of code to transform ideas
+            into intelligent, impactful solutions.
           </p>
         </motion.div>
 

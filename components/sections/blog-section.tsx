@@ -9,53 +9,54 @@ import { Calendar, Clock, ExternalLink } from "lucide-react"
 const blogPosts = [
   {
     id: 1,
-    title: "The Future of Web Development: WebAssembly and Beyond",
+    title: "Building RAG Pipelines with LangChain and Cerebras LLM",
     excerpt:
-      "Exploring how WebAssembly is revolutionizing web performance and opening new possibilities for web applications.",
-    date: "2024-01-15",
-    readTime: "8 min read",
-    tags: ["WebAssembly", "Performance", "Future Tech"],
-    image: "/placeholder.svg?height=200&width=400",
+      "A deep dive into building Retrieval-Augmented Generation systems that allow LLMs to answer questions from custom document collections using LangChain.",
+    date: "2025-06-01",
+    readTime: "10 min read",
+    tags: ["RAG", "LangChain", "LLM"],
+    image: "",
   },
   {
     id: 2,
-    title: "Building Immersive 3D Experiences with Three.js",
+    title: "RESTful API Development with FastAPI and Pydantic",
     excerpt:
-      "A comprehensive guide to creating stunning 3D web experiences using Three.js and modern web technologies.",
-    date: "2024-01-10",
-    readTime: "12 min read",
-    tags: ["Three.js", "3D", "WebGL"],
-    image: "/placeholder.svg?height=200&width=400",
+      "How to build high-performance, type-safe REST APIs using Python's FastAPI framework with automatic documentation and request validation.",
+    date: "2025-04-15",
+    readTime: "8 min read",
+    tags: ["FastAPI", "Python", "API"],
+    image: "",
   },
   {
     id: 3,
-    title: "AI-Powered Development: Tools That Are Changing the Game",
-    excerpt: "How artificial intelligence is transforming the development workflow and what it means for developers.",
-    date: "2024-01-05",
-    readTime: "6 min read",
-    tags: ["AI", "Development", "Tools"],
-    image: "/placeholder.svg?height=200&width=400",
+    title: "Content-Based Movie Recommendation System from Scratch",
+    excerpt:
+      "Building a movie recommender using cosine similarity, feature engineering, and Pandas — from raw data to a working recommendation engine.",
+    date: "2025-03-10",
+    readTime: "7 min read",
+    tags: ["Machine Learning", "Pandas", "Scikit-Learn"],
+    image: "",
   },
 ]
 
 const openSourceProjects = [
   {
-    name: "react-3d-carousel",
-    description: "A performant 3D carousel component for React applications",
-    stars: 234,
-    language: "TypeScript",
+    name: "Patient Management System API",
+    description: "Scalable REST API for healthcare management built with FastAPI and Pydantic",
+    stars: 0,
+    language: "Python",
   },
   {
-    name: "webgl-particle-system",
-    description: "High-performance particle system using WebGL",
-    stars: 156,
-    language: "JavaScript",
+    name: "Chat with PDF – Cerebras LLM",
+    description: "AI chatbot that answers questions from PDFs using RAG and Cerebras LLM",
+    stars: 0,
+    language: "Python",
   },
   {
-    name: "ai-code-assistant",
-    description: "VS Code extension for AI-powered code completion",
-    stars: 89,
-    language: "TypeScript",
+    name: "Movie Recommender System",
+    description: "Content-based movie recommendation engine using cosine similarity",
+    stars: 0,
+    language: "Python",
   },
 ]
 
@@ -202,7 +203,7 @@ export default function BlogSection() {
                       />
                     ))}
                   </div>
-                  <p className="text-white/60 text-sm mt-4">1,247 contributions in the last year</p>
+                  <p className="text-white/60 text-sm mt-4">Building AI projects and contributing to open source</p>
                 </CardContent>
               </Card>
             </motion.div>

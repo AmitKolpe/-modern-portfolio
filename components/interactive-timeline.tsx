@@ -9,33 +9,19 @@ import { Calendar, MapPin, Briefcase } from "lucide-react"
 const timelineData = [
   {
     id: 1,
-    year: "2024",
-    title: "Senior Full-Stack Developer",
-    company: "TechCorp Inc.",
-    location: "San Francisco, CA",
-    description: "Leading development of next-generation web applications using cutting-edge technologies.",
-    technologies: ["React", "Node.js", "TypeScript", "AWS"],
-    achievements: ["Increased performance by 40%", "Led team of 8 developers", "Architected microservices"],
-  },
-  {
-    id: 2,
-    year: "2022",
-    title: "Creative Technologist",
-    company: "Digital Agency",
-    location: "New York, NY",
-    description: "Bridged design and development to create immersive digital experiences.",
-    technologies: ["Three.js", "WebGL", "React", "Python"],
-    achievements: ["Won 3 design awards", "Created viral AR campaign", "Mentored junior developers"],
-  },
-  {
-    id: 3,
-    year: "2020",
-    title: "Frontend Developer",
-    company: "StartupXYZ",
-    location: "Austin, TX",
-    description: "Built responsive web applications and mobile-first experiences.",
-    technologies: ["Vue.js", "JavaScript", "CSS3", "Firebase"],
-    achievements: ["Launched 5 products", "Improved UX metrics by 60%", "Built design system"],
+    year: "2023 - 2027",
+    title: "B.E. Computer Engineering",
+    company: "Dr. D. Y. Patil College of Engineering and Innovation, Pune",
+    location: "Pune, Maharashtra, India",
+    description:
+      "Pursuing a Bachelor of Engineering in Computer Engineering with a focus on AI, Machine Learning, and Data Science. Maintaining a CGPA of 9.3/10.",
+    technologies: ["Python", "Machine Learning", "Data Science", "AI"],
+    achievements: [
+      "CGPA: 9.3 / 10",
+      "Specializing in AI & Machine Learning",
+      "Active participant in tech communities and hackathons",
+      "Building real-world AI projects alongside academics",
+    ],
   },
 ]
 

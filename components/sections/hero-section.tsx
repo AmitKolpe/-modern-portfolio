@@ -3,7 +3,7 @@
 import { useRef, useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { Download, Rocket, AlertCircle } from "lucide-react"
+import { Download, Rocket, AlertCircle, Mail, ExternalLink } from "lucide-react"
 import ParticleBackground from "@/components/3d/particle-background"
 import HolographicAvatar from "@/components/3d/holographic-avatar"
 import { isWebGLSupported } from "@/lib/webgl-utils"
@@ -64,39 +64,79 @@ export default function HeroSection() {
             transition={{ delay: 0.8, duration: 1 }}
             className="text-6xl md:text-8xl font-bold mb-6 liquid-gradient font-sora"
           >
-            John Doe
+            Amit Kolpe
           </motion.h1>
+
+          {/* Role Headline */}
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1, duration: 0.8 }}
+            className="text-xl md:text-2xl text-cyan-400 mb-4 font-medium"
+          >
+            AI Engineer | Data Scientist | Machine Learning Engineer
+          </motion.p>
 
           {/* Subheading */}
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 0.8 }}
-            className="text-xl md:text-2xl text-white/80 mb-8 font-light"
+            transition={{ delay: 1.1, duration: 0.8 }}
+            className="text-lg md:text-xl text-white/70 mb-10 font-light max-w-2xl mx-auto"
           >
-            Inventing tomorrow's web, one line of code at a time.
+            Building intelligent applications using Machine Learning, Generative AI, LangChain, and FastAPI.
           </motion.p>
 
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.2, duration: 0.8 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            transition={{ delay: 1.3, duration: 0.8 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center flex-wrap"
           >
             <Button
               size="lg"
               className="glass-morphism hover:animate-glow text-white border-cyan-400 hover:border-cyan-300 px-8 py-4 text-lg bg-transparent"
               variant="outline"
+              asChild
             >
-              <Rocket className="mr-2 h-5 w-5" />🚀 Explore My Universe
+              <a href="#contact">
+                <Mail className="mr-2 h-5 w-5" />
+                Hire Me
+              </a>
             </Button>
             <Button
               size="lg"
               className="glass-morphism hover:animate-glow text-white border-purple-400 hover:border-purple-300 px-8 py-4 text-lg bg-transparent"
               variant="outline"
+              asChild
             >
-              <Download className="mr-2 h-5 w-5" />📄 Download Resume
+              <a href="#contact">
+                <Rocket className="mr-2 h-5 w-5" />
+                Contact Me
+              </a>
+            </Button>
+            <Button
+              size="lg"
+              className="glass-morphism hover:animate-glow text-white border-green-400 hover:border-green-300 px-8 py-4 text-lg bg-transparent"
+              variant="outline"
+              asChild
+            >
+              <a href="/resume.pdf" download>
+                <Download className="mr-2 h-5 w-5" />
+                Download Resume
+              </a>
+            </Button>
+            <Button
+              size="lg"
+              className="glass-morphism hover:animate-glow text-white border-yellow-400 hover:border-yellow-300 px-8 py-4 text-lg bg-transparent"
+              variant="outline"
+              asChild
+            >
+              <a href="#projects">
+                <ExternalLink className="mr-2 h-5 w-5" />
+                View Projects
+              </a>
             </Button>
           </motion.div>
         </motion.div>

@@ -25,9 +25,20 @@ export default function HolographicAvatar() {
         transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
         className="absolute inset-4 rounded-full glass-morphism flex items-center justify-center overflow-hidden"
       >
-        {/* Placeholder Avatar - Replace with actual image */}
-        <div className="w-full h-full bg-gradient-to-br from-cyan-400/20 to-purple-400/20 rounded-full flex items-center justify-center">
-          <div className="text-4xl">👨‍💻</div>
+        {/* Replace /avatar.jpg with your actual photo */}
+        <div className="w-full h-full bg-gradient-to-br from-cyan-400/30 to-purple-400/30 rounded-full flex items-center justify-center">
+          <img
+            src="/avatar.jpg"
+            alt="Amit Kolpe"
+            className="w-full h-full object-cover rounded-full"
+            onError={(e) => {
+              const target = e.target as HTMLImageElement
+              target.style.display = "none"
+              const fallback = target.nextElementSibling as HTMLElement
+              if (fallback) fallback.style.display = "flex"
+            }}
+          />
+          <div className="text-4xl hidden">👨‍💻</div>
         </div>
       </motion.div>
 

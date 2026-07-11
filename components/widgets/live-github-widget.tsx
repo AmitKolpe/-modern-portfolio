@@ -15,24 +15,33 @@ interface GitHubData {
 
 export default function LiveGitHubWidget() {
   const [githubData, setGithubData] = useState<GitHubData>({
-    commits: 1247,
-    stars: 89,
-    repos: 42,
-    lastCommit: "2 hours ago",
+    commits: 0,
+    stars: 0,
+    repos: 0,
+    lastCommit: "Loading...",
   })
 
-  // Simulate live updates
+  // Fetch real GitHub data
   useEffect(() => {
-    const interval = setInterval(() => {
-      setGithubData((prev) => ({
-        ...prev,
-        commits: prev.commits + Math.floor(Math.random() * 3),
-        lastCommit: Math.random() > 0.5 ? "Just now" : "1 hour ago",
-      }))
-    }, 30000) // Update every 30 seconds
-
-    return () => clearInterval(interval)
+    const fetchGitHubData = async () => {
+      try {
+        const res = await fetch("https://api.github.com/users/amitkolpe")
+        if (res.ok) {
+          const data = await res.json()
+          setGithubData((prev) => ({
+            ...prev,
+            repos: data.public_repos || 0,
+            lastCommit: "Active",
+          }))
+        }
+      } catch {
+        // Keep default values
+      }
+    }
+    fetchGitHubData()
   }, [])
+
+
 
   return (
     <Card className="glass-morphism border-white/20 hover:border-green-400/50 transition-all duration-300">
@@ -66,11 +75,11 @@ export default function LiveGitHubWidget() {
         </div>
 
         <div className="space-y-2">
-          <div className="text-sm text-white/60">Recent Activity:</div>
+          <div className="text-sm text-white/60">Focus Areas:</div>
           <div className="space-y-1">
-            <div className="text-sm text-white/80">🚀 Updated portfolio design system</div>
-            <div className="text-sm text-white/80">✨ Added 3D animations to hero section</div>
-            <div className="text-sm text-white/80">🔧 Optimized build performance</div>
+            <div className="text-sm text-white/80">🤖 Machine Learning & AI Pipelines</div>
+            <div className="text-sm text-white/80">🔗 RAG & LLM Applications</div>
+            <div className="text-sm text-white/80">⚡ FastAPI Backend Development</div>
           </div>
         </div>
       </CardContent>

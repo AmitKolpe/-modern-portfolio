@@ -144,17 +144,21 @@ export default function ContactSection() {
               <CardContent className="space-y-4">
                 <div className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-cyan-400" />
-                  <span className="text-white/80">john.doe@example.com</span>
+                  <a href="mailto:amitkolpe7@gmail.com" className="text-white/80 hover:text-cyan-400 transition-colors">
+                    amitkolpe7@gmail.com
+                  </a>
                 </div>
 
                 <div className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-green-400" />
-                  <span className="text-white/80">+1 (555) 123-4567</span>
+                  <a href="tel:+919322480285" className="text-white/80 hover:text-green-400 transition-colors">
+                    +91-9322480285
+                  </a>
                 </div>
 
                 <div className="flex items-center gap-3">
                   <MapPin className="h-5 w-5 text-purple-400" />
-                  <span className="text-white/80">San Francisco, CA</span>
+                  <span className="text-white/80">Pune, Maharashtra, India</span>
                 </div>
               </CardContent>
             </Card>
@@ -172,21 +176,21 @@ export default function ContactSection() {
                     </div>
                     <div className="flex-1">
                       <p className="text-white/80 text-sm">
-                        Hi! I'm John's AI assistant. I can help answer questions about his experience, schedule
-                        meetings, or provide project details. What would you like to know?
+                        Hi! I'm Amit's AI assistant. I can help answer questions about his experience in AI and Machine
+                        Learning, or provide project details. What would you like to know?
                       </p>
                     </div>
                   </div>
 
                   <div className="flex flex-wrap gap-2">
                     <Badge variant="secondary" className="bg-white/10 text-white cursor-pointer hover:bg-white/20">
-                      Tell me about John's experience
+                      Tell me about Amit's experience
                     </Badge>
                     <Badge variant="secondary" className="bg-white/10 text-white cursor-pointer hover:bg-white/20">
                       What technologies does he use?
                     </Badge>
                     <Badge variant="secondary" className="bg-white/10 text-white cursor-pointer hover:bg-white/20">
-                      Schedule a meeting
+                      View projects
                     </Badge>
                   </div>
                 </div>
@@ -201,14 +205,16 @@ export default function ContactSection() {
               <CardContent>
                 <div className="grid grid-cols-2 gap-4">
                   {[
-                    { name: "GitHub", icon: "🐙", color: "hover:text-gray-400" },
-                    { name: "LinkedIn", icon: "💼", color: "hover:text-blue-400" },
-                    { name: "Twitter", icon: "🐦", color: "hover:text-cyan-400" },
-                    { name: "Discord", icon: "🎮", color: "hover:text-purple-400" },
+                    { name: "GitHub", icon: "🐙", color: "hover:text-gray-400", href: "https://github.com/amitkolpe" },
+                    { name: "LinkedIn", icon: "💼", color: "hover:text-blue-400", href: "https://linkedin.com/in/amitkolpe" },
+                    { name: "Kaggle", icon: "📊", color: "hover:text-cyan-400", href: "https://kaggle.com/amitkolpe" },
+                    { name: "LeetCode", icon: "⚡", color: "hover:text-yellow-400", href: "https://leetcode.com/amitkolpe" },
                   ].map((social) => (
                     <motion.a
                       key={social.name}
-                      href="#"
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       className={`flex items-center gap-2 p-3 rounded-lg glass-morphism border border-white/10 text-white/80 transition-colors ${social.color}`}
@@ -231,7 +237,7 @@ export default function ContactSection() {
           className="mt-20 pt-8 border-t border-white/10 text-center"
         >
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="text-white/60">© 2025 John Doe. Crafted with ❤️ and cutting-edge tech.</div>
+            <div className="text-white/60">© 2026 Amit Kolpe. Crafted with ❤️ and AI.</div>
 
             <div className="flex items-center gap-4">
               <div className="w-16 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full animate-pulse" />

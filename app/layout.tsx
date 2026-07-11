@@ -9,16 +9,38 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 const sora = Sora({ subsets: ["latin"], variable: "--font-sora" })
 
 export const metadata: Metadata = {
-  title: "John Doe - Creative Technologist",
-  description: "Inventing tomorrow's web, one line of code at a time.",
-  keywords: ["developer", "portfolio", "full-stack", "creative technologist"],
-  authors: [{ name: "John Doe" }],
+  title: "Amit Kolpe | AI Engineer & Data Scientist",
+  description:
+    "Portfolio of Amit Kolpe — AI Engineer, Data Scientist, and Machine Learning Developer specializing in Python, FastAPI, LangChain, RAG, LLMs, and intelligent applications.",
+  keywords: [
+    "Amit Kolpe",
+    "AI Engineer",
+    "Data Scientist",
+    "Machine Learning",
+    "Generative AI",
+    "Python",
+    "FastAPI",
+    "LangChain",
+    "RAG",
+    "LLM",
+    "NLP",
+    "Portfolio",
+  ],
+  authors: [{ name: "Amit Kolpe" }],
   openGraph: {
-    title: "John Doe - Creative Technologist",
-    description: "Inventing tomorrow's web, one line of code at a time.",
+    title: "Amit Kolpe | AI Engineer & Data Scientist",
+    description:
+      "Portfolio of Amit Kolpe — Building intelligent applications with Machine Learning, Generative AI, LangChain, and FastAPI.",
     type: "website",
+    locale: "en_US",
   },
-    generator: 'senotron'
+  twitter: {
+    card: "summary_large_image",
+    title: "Amit Kolpe | AI Engineer & Data Scientist",
+    description:
+      "Portfolio of Amit Kolpe — Building intelligent applications with Machine Learning, Generative AI, LangChain, and FastAPI.",
+  },
+  metadataBase: new URL("https://amitkolpe.dev"),
 }
 
 export default function RootLayout({

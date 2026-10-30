@@ -62,6 +62,19 @@ const projectsData = [
     demo: "",
     image: "",
   },
+  {
+    id: 5,
+    name: "Papeer – Research Paper Agent",
+    category: "ai",
+    position: [1.5, -1.6, -1],
+    color: "#a855f7",
+    description:
+      "Conversational RAG assistant for research papers built with LangGraph and Streamlit. Routes each query between direct answers, retrieval over session-isolated Qdrant collections, and claim verification via live web and ArXiv search. Features streaming responses, multi-session isolation, and a DeepEval evaluation pipeline.",
+    technologies: ["Python", "LangGraph", "Qdrant", "Streamlit", "Hugging Face", "RAG"],
+    github: "https://github.com/AmitKolpe/Research-Paper-Agent",
+    demo: "",
+    image: "",
+  },
 ]
 
 function ProjectPlanet({ project, onClick, isSelected }: any) {
@@ -252,16 +265,18 @@ export default function ProjectGalaxy({ selectedFilter }: ProjectGalaxyProps) {
                       </a>
                     </Button>
 
-                    <Button
-                      variant="outline"
-                      className="glass-morphism border-purple-400 text-purple-400 hover:bg-purple-400/20 bg-transparent"
-                      asChild
-                    >
-                      <a href={selectedProject.demo} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="mr-2 h-4 w-4" />
-                        Live Demo
-                      </a>
-                    </Button>
+                    {selectedProject.demo && (
+                      <Button
+                        variant="outline"
+                        className="glass-morphism border-purple-400 text-purple-400 hover:bg-purple-400/20 bg-transparent"
+                        asChild
+                      >
+                        <a href={selectedProject.demo} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="mr-2 h-4 w-4" />
+                          Live Demo
+                        </a>
+                      </Button>
+                    )}
                   </div>
                 </div>
               </div>

@@ -41,22 +41,33 @@ const blogPosts = [
 
 const openSourceProjects = [
   {
+    name: "Papeer – Research Paper Agent",
+    description:
+      "Conversational RAG assistant for research papers using LangGraph, Qdrant and Hugging Face",
+    stars: 0,
+    language: "Python",
+    github: "https://github.com/AmitKolpe/Research-Paper-Agent",
+  },
+  {
     name: "Patient Management System API",
     description: "Scalable REST API for healthcare management built with FastAPI and Pydantic",
     stars: 0,
     language: "Python",
+    github: "https://github.com/AmitKolpe/Patient-Management-System-API_FastAPI",
   },
   {
     name: "Chat with PDF – Cerebras LLM",
     description: "AI chatbot that answers questions from PDFs using RAG and Cerebras LLM",
     stars: 0,
     language: "Python",
+    github: "https://github.com/AmitKolpe/chat-with-pdf-cerebras",
   },
   {
     name: "Movie Recommender System",
     description: "Content-based movie recommendation engine using cosine similarity",
     stars: 0,
     language: "Python",
+    github: "https://github.com/AmitKolpe/Movie-Recommender-System",
   },
 ]
 
@@ -166,8 +177,10 @@ export default function BlogSection() {
                         <Badge variant="secondary" className="bg-white/10 text-white">
                           {project.language}
                         </Badge>
-                        <Button variant="ghost" size="sm" className="text-purple-400 hover:text-purple-300">
-                          View on GitHub
+                        <Button variant="ghost" size="sm" className="text-purple-400 hover:text-purple-300" asChild>
+                          <a href={project.github} target="_blank" rel="noopener noreferrer">
+                            View on GitHub
+                          </a>
                         </Button>
                       </div>
                     </CardContent>
